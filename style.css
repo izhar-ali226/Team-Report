@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+  --color-primary: #009597;
+  --color-primary-dark: #007f67;
+  --color-secondary: #252e62;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.container {
+  width: 400px;
+  max-width: 400px;
+  margin: 18px;
+  padding: 32px;
+  border-radius: var(--border-radius);
+  background-color: #d8d8d8;
+}
+.heading {
+  text-align: center;
+  font-size: 36px;
+}
+.container,
+.formInput,
+.button {
+  font: 500 18px "Roboto", sans-serif;
+}
+.formHidden {
+  display: none;
+}
+
+.form > :first-child {
+  margin-top: 0px;
+}
+.form > :last-child {
+  margin-bottom: 0px;
+}
+.formErrorMessage {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.formErrorMessageSuccess {
+  color: var(--color-success);
+}
+.formErrorMessageError {
+  color: var(--color-error);
+}
+
+.formInput {
+  /* margin-top: 12px; */
+  margin-bottom: 12px;
+}
+.userInput {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: 1px solid white;
+  outline: none;
+  background: #eeeeee;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.userInput:focus {
+  background-color: var(--color-primary);
+  background: #ffffff;
+}
+.inputError {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: var(--color-error);
+}
+.inputError2 {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.userInputError {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.button {
+  width: 100%;
+  padding: 18px 32px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--color-primary);
+  outline: none;
+  cursor: pointer;
+}
+.button:hover {
+  background: var(--color-primary-dark);
+}
+.button:active {
+  transform: scale(0.98);
+}
+.text {
+  text-align: center;
+}
+.formSignUp {
+  color: var(--color-secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+.formSignUp:hover {
+  text-decoration: underline;
+}
+
+.teams {
+  padding-top: 6rem;
+}
+
+.teamsH2 {
+  text-align: center;
+  font-size: 18px;
+  font: 600 18px "Roboto", sans-serif;
+}
+.developers {
+  border: 1px solid gray;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.developersH3 {
+  font-size: 7px;
+  font: 500 18px "Roboto", sans-serif;
+  margin: 20px 0px;
+}
+
+.btn {
+  background-color: var(--color-primary);
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 23px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 12px;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.popupFormInput {
+  margin-bottom: 30px;
+}
+
+.createTeamBtn {
+  width: 44%;
+  margin-right: auto;
+}
+
+.cancelTeamBtn {
+  background: var(--color-error);
+  margin-right: 0px;
+}
+.popupBtnsDiv {
+  display: flex;
+  width: 100%;
+}
+
+/* report and setting section */
+
+.menu {
+  border-bottom: 1px solid gray;
+}
+.menu button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-right: 17px;
+}
+.menu button > :hover {
+  background: transparent;
+  border-bottom: 2px solid red;
+  outline: none;
+}
+
+.dateAndDropdownsection {
+  display: flex;
+  margin-top: 20px;
+}
+.dropdown {
+  outline: none;
+  padding: 12px;
+  font-size: 15px;
+  margin: 10px 0px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.date {
+  margin: 20px auto;
+  margin-left: 126px;
+}
+.reporth3 {
+  font-size: 1.3rem;
+  font: 600 18px "Roboto", sans-serif;
+}
+
+.questionsPage {
+  padding: 12px 20px;
+}
+.bothQA {
+  margin: 8px 25px;
+  padding: 8px;
+}
+.settingQuestion {
+  padding: 21px 0px;
+  border-bottom: 1px solid gray;
+  
+}
+
+.firstMember {
+  display: inline-block;
+  padding: 7px 7px;
+  margin: 12px;
+  border-radius: 23px;
+  background: gray;
+}
+.cancelMember{
+  background: rgb(102, 102, 102);
+  padding: 2px 5px;
+  border-radius:15px
+}
+.cancelMember:hover{
+  background: var(--color-error);
+}
+.answer {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  padding: 12px 0px;
+  padding-right: 130px;
+}
+.answer::placeholder {
+  color: rgb(97, 97, 97);
+}
+.SubmitBtn {
+  font-size: 16px;
+  font: 16px "Roboto", sans-serif;
+  padding: 12px 20px;
+  margin-top: 12px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background: var(--color-primary);
+}
+.SubmitBtn:hover {
+  background: var(--color-primary-dark);
+}
+.SubmitBtn:active {
+  transform: scale(0.98);
+}

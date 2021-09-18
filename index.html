@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Report</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container " id="homePageWidth">
+
+    <!-- signin form  -->
+    <form class="form" id="loginForm">
+      <h1 class="heading">Login</h1>
+      <div class="formErrorMessage formErrorMessageError"></div>
+      <div class="formInput">
+        <input autofocus class="userInput" type="text" id="signInUsername" placeholder="Username or Email" />
+      </div>
+      <div class="inputError"></div>
+
+      <div class="formInput">
+        <input class="userInput" type="password" id="signInPassword" placeholder="password" />
+      </div>
+      <div class="inputError inputError2"></div>
+      <button class="button" type="button" id="homePage1" onclick="signIn()">SignIn</button>
+      <p class="text">
+        <a class="formSignUp" href="/" id="linkCreateAccount">SignUp</a>
+      </p>
+    </form>
+
+
+    <!-- signUp form  -->
+    <form class="form formHidden" id="createAccount">
+      <h1 class="heading">SignUp</h1>
+      <div class="formErrorMessage formErrorMessageError"></div>
+      <div class="formInput">
+        <input autofocus class="userInput" type="text" id="signUpUser" placeholder="Username" />
+        <div class="inputError"></div>
+      </div>
+      <div class="formInput">
+        <input autofocus class="userInput" type="email" id="signUpEmail" placeholder="Email" />
+        <div class="inputError"></div>
+      </div>
+
+      <div class="formInput">
+        <input class="userInput" type="password" id="signUpPassword" placeholder="password" />
+        <div class="inputError inputError2"></div>
+      </div>
+      <div class="formInput">
+        <input class="userInput" type="password" id="ConfirmPassword" placeholder="confirm password" />
+        <div class="inputError inputError2"></div>
+      </div>
+      <button type="button" onclick="signUp()" class="button">Continue</button>
+      <p class="text">
+        <a class="formSignUp" href="/" id="linkLogin">Already have an Account</a>
+      </p>
+    </form>
+
+    <!-- home page -->
+    <div class="teams formHidden " id="homePage">
+      <h2 class="teamsH2">Teams You you Own</h2>
+      <div class="developers" id="developers" onclick="homePageTeams()">
+        <h3 class="developersH3">Developers</h3>
+        <h5>Members: `haris faizan izhar `</h4>
+      </div>
+
+      <div class="developers maintanceTeam"  onclick="homePageTeams()">
+        <h3 class="developersH3">Maintance Team</h3>
+        <h5>Members: `haris faizan izhar`</h5>
+      </div>
+
+      <h2 class="teamsH2">Teams You're part off </h2>
+      <div class="developers leads"  onclick="homePageTeams()">
+        <h3 class="developersH3">Leads</h3>
+        <h5>Members: `haris faizan izhar `</h4>
+      </div>
+
+      <div class="developers maintanceTeam "  onclick="homePageTeams()">
+        <h3 class="developersH3">Architets</h3>
+        <h5>Members: `haris faizan izhar`</h5>
+      </div>
+      <button class="btn" id="plus" onclick="addUser()"><i class="fa fa-plus"></i></button>
+
+    </div>
+
+    <!-- create teams -->
+
+    <div class="popup formHidden" id="popup">
+      <form class="form" id="CreateTeams">
+        <h1 class="heading">Create New Team</h1>
+        <div class="formInput popupFormInput">
+          <input autofocus class="userInput" type="text" id="TeamName" placeholder="Team Name" />
+        </div>
+        <div class="formInput popupFormInput">
+          <input class="userInput" type="email" id="membersEmail" placeholder="Members Type (email)" />
+        </div>
+
+        <div class="popupBtnsDiv">
+          <button class="button createTeamBtn" type="button" id="createTeamBtn"
+            onclick="createTeamBtnFun()">Create</button>
+          <button class="button cancelTeamBtn createTeamBtn" type="button" id="cancelTeamBtn"
+            onclick="cancelTeamBtnFun()">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- report and setting section -->
+    <div class="report formHidden" id="report">
+      <div class="menu">
+        <button id="reportMenu" onclick="reportMenu()">
+          <h3>Report</h3>
+        </button>
+        <button id="settingMenu" onclick="settingMenu()">
+          <h3>Setting</h3>
+        </button>
+      </div>
+
+      <div class="" id="reportPage">
+        <div class="dateAndDropdownsection">
+          <div class="allMembers">
+            <select id="allMemnets " class="dropdown">
+              <option value="All Members">All Members</option>
+              <option value="hassan">hassan</option>
+              <option value="faizan">faizan</option>
+            </select>
+          </div>
+          <div class="date"> 16th August 2021</div>
+        </div>
+        <div class="indisivalMembers">
+          <h3 class="reporth3">Haris: 16th Aug</h3>
+          <p class="questions bothQA">Q. what did you do today?</p>
+          <p class="answes bothQA">A. noting.</p>
+          <p class="questions bothQA">Q. what did you do today?</p>
+          <p class="answes bothQA">A. noting.</p>
+          <p class="questions bothQA">Q. what did you do today?</p>
+          <p class="answes bothQA">A. noting.</p>
+        </div>
+        <div class="indisivalMembers">
+          <h3 class="reporth3">izhar: 16th Aug</h3>
+          <p class="questions bothQA">Q. what did you do today?</p>
+          <p class="answes bothQA">A. noting.</p>
+          <p class=" bothQA">Q. what did you do today?</p>
+          <p class="answes bothQA">A. noting.</p>
+          <p class="questions bothQA">Q. what did you do today?</p>
+          <p class="answes bothQA">A. noting.</p>
+        </div>
+      </div>
+
+      <div class="formHidden" id="settingPage">
+
+        <div class="indisivalMembers">
+          <h3 class="reporth3">Questions</h3>
+          <p class="questions bothQA settingQuestion">what did you do today?</p>
+          <p class="questions bothQA settingQuestion">what did you do today?</p>
+          <p class="questions bothQA settingQuestion">what did you do today?</p>
+        </div>
+        <div class="rememberTime">
+          <h3 class="reporth3">Remember Time</h3>
+          <input type="date " class="settingdate dropdown" value="2021-09-29" />
+          <input type="checkbox" checked> <span>Exclude Weekends</span>
+        </div>
+        <div class="addedMembers">
+          <h3 class="reporth3">Members</h3>
+          <div class="membersEmails">
+            <div class="firstMember"> as@gmail.com &nbsp;&nbsp; <span class="cancelMember"> x </span></div>
+            <div class="firstMember"> as@gmail.com &nbsp;&nbsp; <span class="cancelMember"> x </span></div>
+            <div class="firstMember"> as@gmail.com &nbsp;&nbsp; <span class="cancelMember"> x </span></div>
+            <div class="firstMember"> as@gmail.com &nbsp;&nbsp; <span class="cancelMember"> x </span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Questions -->
+    <div class="indisivalMembers formHidden" id="questions">
+      <h3 class="reporth3">Filling for : 12th August 2021</h3>
+      <div class="questionsPage">
+        <p class="">what did you do today?</p>
+        <input type="text" class="answer" id="answer1" placeholder="Answer" />
+        <p class=" ">what did you do today?</p>
+        <input type="text" class="answer" id="answer2" placeholder="Answer" />
+        <p class=" ">what did you do today?</p>
+        <input type="text" class="answer" id="answer3" placeholder="Answer" /><br>
+        <input type="submit" onclick="Submit()" class="SubmitBtn" value="Submit">
+      </div>
+    </div>
+  </div>
+  <script src="/index.js"></script>
+</body>
+
+</html>
